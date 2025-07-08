@@ -1,5 +1,5 @@
-certbot-oci-cms
-===============
+certbot-oci-certs
+=================
 
 Oracle Cloud Infrastructure (OCI) Installer plugin for Certbot.
 
@@ -36,7 +36,7 @@ or
 ::
 
     git clone git@github.com:therealcmj/certbot-oci-certs.git
-    pip install ./certbot-oci-cms
+    pip install ./certbot-oci-certs
 
 
 Development
@@ -47,7 +47,7 @@ If you want to work on the code you should create a virtual environment and inst
 ::
 
     git clone git@github.com:therealcmj/certbot-oci-certs.git
-    cd certbot-oci-cms
+    cd certbot-oci-certs
     virtualenv dev
     . ./dev/bin/activate
     pip install -e .
