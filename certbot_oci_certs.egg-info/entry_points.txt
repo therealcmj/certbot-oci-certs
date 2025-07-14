@@ -1,0 +1,2 @@
+[certbot.plugins]
+oci = certbot_oci_certs.installer:OCIInstaller

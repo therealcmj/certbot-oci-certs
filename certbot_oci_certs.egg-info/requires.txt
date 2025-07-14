@@ -1,0 +1,5 @@
+acme>=1.7.0
+certbot>=1.7.0
+setuptools
+mock
+oci

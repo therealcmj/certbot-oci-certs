@@ -1,0 +1,10 @@
+README.rst
+setup.py
+certbot_oci_certs/__init__.py
+certbot_oci_certs/installer.py
+certbot_oci_certs.egg-info/PKG-INFO
+certbot_oci_certs.egg-info/SOURCES.txt
+certbot_oci_certs.egg-info/dependency_links.txt
+certbot_oci_certs.egg-info/entry_points.txt
+certbot_oci_certs.egg-info/requires.txt
+certbot_oci_certs.egg-info/top_level.txt
