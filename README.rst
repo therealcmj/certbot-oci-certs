@@ -84,4 +84,60 @@ You can always get a list of the available arguments by running
 
   certbot installer -h oci
 
+Examples
+--------
+
+Assuming you have previously acquired a certificate for demosite.ociateam.com
+(perhaps using the certbot-dns-oci plug-in)
+you can install it via:
+
+
+::
+
+    certbot install \
+     --logs-dir logs --work-dir work --config-dir config \
+     --installer oci \
+     --oci-compartment $MYOCICOMPARTMENT \
+     --cert-path demosite.ociateam.com/cert.pem \
+     --key-path demosite.ociateam.com/privkey.pem \
+     --chain-path demosite.ociateam.com/chain.pem \
+     -d demosite.ociateam.com
+
+
+
+If you want to acquire a certificate AND install it in one go using both of my plug-ins you can do that too...
+
+::
+    CERTNAME=demo$$.ociateam.com ; \
+    certbot run \
+     --test-cert \
+     --logs-dir logs --work-dir work --config-dir config \
+     --authenticator dns-oci \
+     --installer oci \
+     --oci-compartment $MYOCICOMPARTMENT \
+     --oci-certificate-name $CERTNAME \
+     --debug \
+     -d $CERTNAME
+
+
+And to renew (just that one certificate) later it's just:
+
+::
+
+    CERTNAME=demo$$.ociateam.com ; \
+    certbot renew \
+     --test-cert \
+     --logs-dir logs --work-dir work --config-dir config \
+     --debug \
+     --cert-name $CERTNAME
+
+
+CAUTION:
+--------
+
+Please do remember tat "certbot renew" tries to renew all certs nearing expiration. If you use the
+--oci-certificate-name command line argument when running "certbot renew" you're going to make a mess of things.
+So be cautious and renew certs one by one OR remember to leave that command line argument off!
+
+YOU HAVE BEEN WARNED.
 

@@ -15,8 +15,8 @@ from pycparser.ply.yacc import resultlimit
 #import oci.certificates_management.CertificatesManagementClient
 
 logger = logging.getLogger(__name__)
-import sys
-logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
+# import sys
+# logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
 
 class OCIInstaller(common.Plugin, interfaces.Installer):
     description = "OCI Certificates Service installer. Uploads the acquired certificate into the OCI Certificates Service - either as a new certificate or as a new certificate version."
@@ -251,10 +251,12 @@ class OCIInstaller(common.Plugin, interfaces.Installer):
             #  (1) as a reminder that I changed my mind about this
             #  (2) as a warning to others that I changed my mind once about this already
             #  (3) in case I change my mind again
-            from datetime import datetime
-            name = "certbot-imported-cert-" + domain + datetime.now().strftime("-%Y%m%dT%H%M%S")
+            # from datetime import datetime
+            # name = "certbot-imported-cert-" + domain + datetime.now().strftime("-%Y%m%dT%H%M%S")
 
-            # name = domain
+            # name = "certbot-imported-cert-" + domain
+
+            name = domain
             logger.debug("Automatically generated certificate name '{}'.".format(name))
 
             _details['name'] = name
