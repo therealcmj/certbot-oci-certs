@@ -108,6 +108,7 @@ you can install it via:
 If you want to acquire a certificate AND install it in one go using both of my plug-ins you can do that too...
 
 ::
+
     CERTNAME=demo$$.ociateam.com ; \
     certbot run \
      --test-cert \
