@@ -24,7 +24,7 @@ setup(
     description="OCI Certs Management Service plugin for Certbot",
     long_description=long_description,
     long_description_content_type="text/x-rst",
-    url="https://github.com/therealcmj/certbot-oci-cms",
+    url="https://github.com/therealcmj/certbot-oci-certs",
     author="Chris Johnson",
     author_email="christopher.johnson@oracle.com",
     license="Apache License 2.0",
